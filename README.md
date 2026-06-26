@@ -1,16 +1,16 @@
-:::writing
 
-# React + TypeScript + Vite App (Context + useReducer)
+
+# React + Leaflet + JavaScript + Vite App + React-Router (Context + useReducer)
+<img width="1920" height="889" alt="screencapture-localhost-5173-app-cities-2026-06-26-15_42_57" src="https://github.com/user-attachments/assets/b3f3b299-13ac-409e-8d45-0e547ed4acd1" />
 
 ## Overview
 
-This project is a modern React application built with **Vite** and **TypeScript**, using the **Context API** and **useReducer** for global state management.
+This project is a modern React/Leaflet application built with **Vite** and **JavaScript**, using the **Context API** and **useReducer** for global state management and **React-Router** for handling routes.
 
 Instead of external state libraries, the application relies on React’s built‑in tools to manage and share state across components in a predictable and scalable way.
 
 The architecture focuses on:
 
-- Type-safe state management
 - Clear separation of concerns
 - Maintainable component structure
 - Fast development with Vite
@@ -20,10 +20,12 @@ The architecture focuses on:
 ## Tech Stack
 
 - **React** – UI library for building components
-- **TypeScript** – Static typing for safer and more maintainable code
+- **JavaScript** – Static typing for safer and more maintainable code
 - **Vite** – Fast development server and build tool
+- **React-Router** - managing the routes
 - **Context API** – Global state sharing
 - **useReducer** – Predictable state transitions
+- **Leaflet** - opensource map
 
 ---
 
@@ -37,7 +39,7 @@ Benefits include:
 - Predictable updates through actions
 - Easier debugging
 - Built-in React solution with no extra dependencies
-- Strong type safety with TypeScript
+
 
 ---
 
@@ -50,8 +52,8 @@ components/ → Reusable UI components
  context/ → Context providers and reducers  
  hooks/ → Custom React hooks  
  pages/ → Page-level components  
- App.tsx → Main application component  
- main.tsx → Application entry point
+ App.jsx → Main application component  
+ main.jsx → Application entry point
 
 State logic typically lives inside the **context folder**, where reducers and provider components are defined.
 
@@ -71,6 +73,9 @@ npm install
 ```
 
 ### 3. Run the development server
+```
+npm run server
+```
 
 ```
 npm run dev
@@ -101,6 +106,11 @@ npm run preview
 ---
 
 ## Key Concepts Used
+### Leaflet
+provides a map feature using openstreetmap
+
+### React-Router
+used to manages routes and protects them
 
 ### Context API
 
@@ -110,16 +120,6 @@ Used to provide global state to the entire component tree without prop drilling.
 
 Manages complex state transitions using explicit actions and a reducer function.
 
-### TypeScript
-
-Provides static typing for:
-
-- State
-- Actions
-- Context values
-- Component props
-
-This reduces runtime errors and improves maintainability.
 
 ---
 
